@@ -1,0 +1,16 @@
+&spi2 {
+        status = "okay";
+        cs-gpios = <&gpioc 4 GPIO_ACTIVE_HIGH>;
+        sdhc0: sdhc@0 {
+                compatible = "zephyr,mmc-spi-slot";
+                reg = <0>;
+                status = "okay";
+                label = "SDHC0";
+                spi-max-frequency = <25000000>;
+        };
+};
+
+&usart1 {
+	current-speed = <921600>;
+	status = "okay";
+};
